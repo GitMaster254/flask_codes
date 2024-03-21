@@ -1,0 +1,19 @@
+<!-- this is a template file -->
+<!-- contains the main HTML structure of your web pages -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Message Board - {% block title %}{% endblock title %}</title>
+</head>
+<body>
+<h1>Message Board</h1>
+<section>
+  <header>
+    {% block header %}{% endblock header %}
+  </header>
+  <main>
+    {% block content %}<p>No messages.</p>{% endblock content %}
+  <main>
+</section>
+</body>
+</html>
