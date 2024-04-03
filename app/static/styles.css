@@ -9,7 +9,9 @@
     text-align: center;
   }
   
-  a,
+  a{
+    text-decoration: none;
+  }
   a:visited {
     color: #007bff;
   }
@@ -21,6 +23,7 @@
   nav ul {
     list-style-type: none;
     padding: 0;
+    text-decoration: none;
   }
   
   nav ul li {
