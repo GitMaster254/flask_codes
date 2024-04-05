@@ -10,3 +10,7 @@ document.getElementById("about-tab").addEventListener("click", function() {
 document.getElementById("events-tab").addEventListener("click", function() {
     window.location.href = "/services";
 });
+
+document.getElementById("signin-tab").addEventListener("click", function() {
+    window.location.href = "/signin";
+});
