@@ -7,12 +7,21 @@
 {% block content %}
 <main id="home-tab">
 <p>
-  GameSphere
-</p>
-
-<p>
-Welcome to the GameSphere, the best place to get your gaming 
+Welcome to GameSphere, the best place to get your gaming 
 fever going!
+</p>
+<img class="img" src="static/image.png"/>
+<p>A brand new space that allows you to keep track of gaming 
+  events around you
+</p>
+<h>Exclusive video</h>
+<div class="video">
+<video class="vdo" width="420" height="150px" controls >
+  <source src={{ url_for("static",filename="v1.mp4") }} type="video/mp4">
+</video>
+</div>
+<p>You can get us in all the social media handles, were we showcase our 
+  champions (Those spirited and worthy to emerge victorious!)
 </p>
 </main>
 {% endblock content %} 
