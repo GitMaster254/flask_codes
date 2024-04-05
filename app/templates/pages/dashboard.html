@@ -1,0 +1,42 @@
+{%extends "base.html"%}
+
+{% block header %}
+  <h2>{% block title %}Dashboard{% endblock title %}</h2>
+{% endblock header %}
+
+{% block content %}
+<main id="Dashboard-tab">
+    <header>
+        <h1>Welcome to the Events Game Dashboard</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('events') }}">Events</a></li>
+            <li><a href="{{ url_for('players') }}">Players</a></li>
+            <li><a href="{{ url_for('statistics') }}">Statistics</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <h2>Upcoming Events</h2>
+        <ul>
+            {% for event in upcoming_events %}
+                <li>{{ event }}</li>
+            {% endfor %}
+        </ul>
+        
+        <h2>Recent Results</h2>
+        <ul>
+            {% for result in recent_results %}
+                <li>{{ result }}</li>
+            {% endfor %}
+        </ul>
+    </main>
+    
+    <footer>
+        <p>&copy; {{ current_year }} Your Events Game App. All rights reserved.</p>
+    </footer>
+</body>
+{%endblock content%}
