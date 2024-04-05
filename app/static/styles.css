@@ -1,23 +1,21 @@
 * {
     box-sizing: border-box;
+    font-size: 20px;
   }
   
   body {
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 50px;
     margin: 0 auto;
     text-align: center;
+    min-width: 700px;
+    padding-top: 10px; 
+    padding-left: 100px ;
+    padding-right: 100px;
   }
   
   a{
     text-decoration: none;
-  }
-  a:visited {
-    color: #007bff;
-  }
-  
-  a:hover {
-    color: #b6033e;
   }
   
   nav ul {
@@ -35,3 +33,45 @@
     width: 80%;
     margin: 0 auto;
   }
+h1{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+h2{
+  margin :10px;
+  text-align:left;
+}
+p{
+  text-decoration: none;
+  font-size: large;
+  display: flex;
+}
+.img{
+  height: 150px;
+  width: 400px;
+  border-radius: 5px;
+  position: relative;
+}
+.vdo{
+  height: 250px;
+  width: 400px;
+}
+.video{
+  margin: 0 auto;
+  padding: 10px;
+}
+footer{
+  text-align: center;
+  font-size: small;
+  color: #df2909;
+
+}
+footer a{
+  text-decoration: none;
+}
+#pillNav2 li :hover{
+text-decoration: none;
+color: #df2909;
+}
+
