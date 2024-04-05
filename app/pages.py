@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request, redirect, url_for, flash, session
 
 #creating instance with pages(the name of the blueprint)
 bp = Blueprint("pages", __name__)
@@ -14,3 +14,12 @@ def about():
 @bp.route("/services")
 def services():
     return render_template("pages/services.html")
+
+@bp.route("/signin", methods=['GET', 'POST']) # type: ignore
+def signin():
+     return render_template("pages/signin.html")  # Redirect to the sign-in page again
+     
+
+@bp.route("/dashboard") 
+def dashboard():
+    return render_template("pages/dashboard.html")
