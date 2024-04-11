@@ -2,6 +2,8 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase
 from app import pages
+from app.user import db
+
 
 
 def create_app():
@@ -10,10 +12,13 @@ def create_app():
     app.secret_key = "@secretkey#"
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
-    class Base(DeclarativeBase):
-        pass
-    db = SQLAlchemy(model_class=Base)
-
     app.register_blueprint(pages.bp)
     return app
+
+if __name__ == "__main__":
+    app = create_app()
+    app.run(debug=True)
+    db.init_app(app)
+    with app.app_context():
+        db.create_all()
+    
