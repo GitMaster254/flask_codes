@@ -41,20 +41,25 @@ h2{
   margin :10px;
   text-align:left;
 }
-p{
-  text-decoration: none;
-  font-size: large;
-  display: flex;
+
+#home-tab {
+  text-align: center;
 }
-.img{
-  height: 150px;
-  width: 400px;
-  border-radius: 5px;
-  position: relative;
+
+#home-tab p {
+  margin-bottom: 20px;
 }
-.vdo{
-  height: 250px;
-  width: 400px;
+#home-tab .img {
+  width: 80%; /* Adjust the width as needed */
+  max-width: 400px; /* Set a maximum width */
+  display: block;
+  margin: 0 auto; /* Center the image */
+}
+#home-tab .vdo {
+  width: 100%; /* Responsive video width */
+  max-width: 600px; /* Set a maximum width */
+  display: block;
+  margin: 0 auto; /* Center the video */
 }
 .video{
   margin: 0 auto;
@@ -72,5 +77,9 @@ footer a{
 #pillNav2 li :hover{
 text-decoration: none;
 color: #df2909;
+}
+#home-tab{
+  text-align: center;
+
 }
 
