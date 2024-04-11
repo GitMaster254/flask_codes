@@ -13,12 +13,14 @@ def create_app():
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.register_blueprint(pages.bp)
+    db.init_app(app)
     return app
+
 
 if __name__ == "__main__":
     app = create_app()
     
-    db.init_app(app)
+    
     with app.app_context():
         db.create_all()
     app.run(debug=True)
