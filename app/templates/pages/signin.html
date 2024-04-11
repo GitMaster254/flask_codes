@@ -6,27 +6,19 @@
 
 {% block content %}
 <main id="signin-tab">
-<p>Sign in to your account.</p>
-<form class="row g-3 needs-validation" novalidate action="{{ url_for('pages.signin') }}" method="post">
-  <div class="col-md-4">
-      Looks good!
-    </div>
-  </div>
-  <div class="col-12">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required="true">
-      <label class="form-check-label" for="invalidCheck">
-        Agree to terms and conditions
-      </label>
-      <div class="invalid-feedback">
-        You must agree before submitting.
-      </div>
-    </div>
-  </div>
-  <div class="col-12">
-    <button class="btn btn-primary" type="submit">Sign In</button>
-  </div>
-</form>
+  <h1>Sign up</h1>
+  {% if error_message %}
+      <p style="color: red;">{{ error_message }}</p>
+  {% endif %}
+  <form action="{{ url_for('pages.signin') }}" method="post">
+      <label for="username">Username:</label><br>
+      <input type="text" id="username" name="username"><br>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email"><br>
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password"><br><br>
+      <input type="submit" value="Sign Up">
+  </form>
 
 </main>
 {% endblock content %}
