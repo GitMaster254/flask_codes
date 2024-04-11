@@ -8,10 +8,9 @@
     font-size: 50px;
     margin: 0 auto;
     text-align: center;
-    min-width: 700px;
-    padding-top: 10px; 
-    padding-left: 100px ;
-    padding-right: 100px;
+    justify-content: center;
+    height: 100vh;
+    
   }
   
   a{
